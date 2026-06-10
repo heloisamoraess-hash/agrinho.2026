@@ -1,1 +1,499 @@
 
+/* ===== RESET E CONFIGURAÇÕES GLOBAIS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4faf4;
+    color: #1a3b1a;
+    transition: all 0.3s ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== BOTÃO DE ACESSIBILIDADE FIXO ===== */
+.botao-acessibilidade {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#btnAcessibilidade {
+    background-color: #2d6a2d;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background 0.3s;
+}
+
+#btnAcessibilidade:hover {
+    background-color: #1e4a1e;
+}
+
+.menu-acessibilidade {
+    position: absolute;
+    bottom: 60px;
+    right: 0;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 170px;
+}
+
+.menu-acessibilidade button {
+    background-color: #e8f0e8;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #1a3b1a;
+    text-align: left;
+    transition: background 0.3s;
+}
+
+.menu-acessibilidade button:hover {
+    background-color: #c8e0c8;
+}
+
+/* ===== CABEÇALHO ===== */
+.cabecalho {
+    background: linear-gradient(135deg, #1e5620, #2d7a2d);
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.cabecalho .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo h1 {
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+.logo p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+.menu a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* ===== SEÇÕES GERAIS ===== */
+.secao {
+    padding: 60px 0;
+}
+
+.secao h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #1e5620;
+}
+
+/* ===== SEÇÃO INÍCIO ===== */
+.inicio .container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.conteudo-inicio {
+    flex: 1;
+}
+
+.conteudo-inicio h2 {
+    text-align: left;
+    font-size: 36px;
+}
+
+.conteudo-inicio p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.botao-principal {
+    display: inline-block;
+    background-color: #2d7a2d;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.botao-principal:hover {
+    background-color: #1e5620;
+    transform: scale(1.05);
+}
+
+.imagem-inicio {
+    flex: 1;
+    min-height: 250px;
+}
+
+.ilustracao-verde {
+    background: linear-gradient(145deg, #4caf50, #2e7d32);
+    border-radius: 30px;
+    height: 250px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.ilustracao-verde::before {
+    content: "🌾🌱🌍";
+    position: absolute;
+    font-size: 60px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ===== SEÇÃO PROBLEMA (CARDS) ===== */
+.problema {
+    background-color: #e8f3e8;
+}
+
+.cards-problema {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    flex: 1;
+    min-width: 250px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+    border-left: 5px solid #2d7a2d;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #2d7a2d;
+    margin-bottom: 15px;
+}
+
+.texto-destaque {
+    text-align: center;
+    font-size: 18px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ===== SEÇÃO AVALIAÇÃO (FUNCIONALIDADE PRINCIPAL JS) ===== */
+.avaliacao {
+    background-color: #f0f7f0;
+}
+
+.pergunta {
+    margin-bottom: 25px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.pergunta label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #1e5620;
+}
+
+.pergunta select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #c8e0c8;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.pergunta select:focus {
+    outline: none;
+    border-color: #2d7a2d;
+}
+
+.botao-avaliar {
+    background-color: #2d7a2d;
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.botao-avaliar:hover {
+    background-color: #1e5620;
+}
+
+/* Resultado da avaliação */
+.resultado {
+    margin-top: 40px;
+    background: #2d7a2d;
+    color: white;
+    padding: 30px;
+    border-radius: 25px;
+}
+
+.resultado h3 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+#mensagemResultado {
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(255,255,255,0.3);
+}
+
+#dicasPersonalizadas {
+    margin: 20px 0;
+    line-height: 1.8;
+}
+
+#dicasPersonalizadas p {
+    background: rgba(255,255,255,0.15);
+    padding: 12px;
+    border-radius: 12px;
+    margin: 10px 0;
+}
+
+.botao-refazer {
+    background-color: white;
+    color: #2d7a2d;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: transform 0.2s;
+}
+
+.botao-refazer:hover {
+    transform: scale(1.02);
+    background-color: #f0f7f0;
+}
+
+/* ===== SEÇÃO DICAS ===== */
+.dicas {
+    background-color: white;
+}
+
+.lista-dicas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.dica-item {
+    background: #e8f3e8;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.2s;
+}
+
+.dica-item:hover {
+    transform: translateX(5px);
+}
+
+.dica-item span {
+    font-size: 40px;
+}
+
+.dica-item p {
+    flex: 1;
+}
+
+/* ===== SEÇÃO CONCLUSÃO ===== */
+.conclusao {
+    background: linear-gradient(135deg, #1e5620, #2d7a2d);
+    color: white;
+    text-align: center;
+}
+
+.conclusao h2 {
+    color: white;
+}
+
+.conclusao p {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.destaque-concurso {
+    margin-top: 30px;
+    padding: 15px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 50px;
+    display: inline-block;
+}
+
+/* ===== RODAPÉ ===== */
+.rodape {
+    background-color: #0d2b0d;
+    color: #a8d5a8;
+    text-align: center;
+    padding: 30px 0;
+}
+
+/* ===== ALTO CONTRASTE (ativado pelo JavaScript) ===== */
+.alto-contraste {
+    background-color: black !important;
+    color: yellow !important;
+}
+
+.alto-contraste .cabecalho,
+.alto-contraste .conclusao,
+.alto-contraste .resultado {
+    background-color: #111 !important;
+    color: yellow !important;
+}
+
+.alto-contraste .card,
+.alto-contraste .pergunta,
+.alto-contraste .dica-item {
+    background-color: #222 !important;
+    color: yellow !important;
+    border-color: yellow !important;
+}
+
+.alto-contraste a,
+.alto-contraste button {
+    background-color: #333 !important;
+    color: yellow !important;
+    border: 1px solid yellow !important;
+}
+
+.alto-contraste .botao-principal,
+.alto-contraste .botao-avaliar {
+    background-color: #444 !important;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    .cabecalho .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .inicio .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .conteudo-inicio h2 {
+        text-align: center;
+    }
+    
+    .secao h2 {
+        font-size: 28px;
+    }
+    
+    .cards-problema {
+        flex-direction: column;
+    }
+    
+    .lista-dicas {
+        grid-template-columns: 1fr;
+    }
+    
+    .botao-acessibilidade {
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    #btnAcessibilidade {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .secao {
+        padding: 40px 0;
+    }
+    
+    .logo h1 {
+        font-size: 24px;
+    }
+    
+    .conteudo-inicio h2 {
+        font-size: 28px;
+    }
+}
