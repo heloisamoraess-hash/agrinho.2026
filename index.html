@@ -1,1 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GreenAgro - Unindo agronomia e sustentabilidade para um futuro melhor">
+    <title>GreenAgro | Agro forte, futuro sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <!-- ===== BOTÃO DE ACESSIBILIDADE FIXO ===== -->
+    <div class="botao-acessibilidade" id="botaoAcessibilidade">
+        <button id="btnAcessibilidade" aria-label="Opções de acessibilidade">♿ Acessibilidade</button>
+        <div class="menu-acessibilidade" id="menuAcessibilidade" style="display: none;">
+            <button id="btnAumentarFonte">🔍 A+ Aumentar fonte</button>
+            <button id="btnDiminuirFonte">🔍 A- Diminuir fonte</button>
+            <button id="btnAltoContraste">🌓 Alto contraste</button>
+        </div>
+    </div>
+
+    <!-- ===== CABEÇALHO DO SITE ===== -->
+    <header class="cabecalho">
+        <div class="container">
+            <div class="logo">
+                <h1>🌱 GreenAgro</h1>
+                <p>Agro forte, futuro sustentável</p>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#problema">Problema</a></li>
+                    <li><a href="#avaliacao">Avaliação</a></li>
+                    <li><a href="#dicas">Dicas</a></li>
+                    <li><a href="#conclusao">Conclusão</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+    <main>
+        <!-- SEÇÃO 1: INÍCIO -->
+        <section id="inicio" class="secao inicio">
+            <div class="container">
+                <div class="conteudo-inicio">
+                    <h2>Unindo sustentabilidade e agronomia</h2>
+                    <p>O futuro do campo depende do equilíbrio entre produção agrícola e preservação ambiental. O <strong>GreenAgro</strong> nasceu para conscientizar sobre práticas sustentáveis que protegem a água, o solo e a biodiversidade.</p>
+                    <p><strong>Tema Agrinho 2026:</strong> "Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente"</p>
+                    <a href="#avaliacao" class="botao-principal">🌿 Começar avaliação →</a>
+                </div>
+                <div class="imagem-inicio">
+                    <div class="ilustracao-verde"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 2: PROBLEMA AMBIENTAL -->
+        <section id="problema" class="secao problema">
+            <div class="container">
+                <h2>🌍 O problema que enfrentamos</h2>
+                <div class="cards-problema">
+                    <article class="card">
+                        <h3>💧 Consumo excessivo de água</h3>
+                        <p>A agricultura consome cerca de 70% da água doce disponível no mundo. Técnicas ineficientes de irrigação geram desperdício e pressionam os recursos hídricos.</p>
+                    </article>
+                    <article class="card">
+                        <h3>🧪 Uso descontrolado de insumos</h3>
+                        <p>Agrotóxicos e fertilizantes aplicados em excesso contaminam rios, nascentes, lençóis freáticos e prejudicam a biodiversidade do solo.</p>
+                    </article>
+                    <article class="card">
+                        <h3>🌱 Falta de consciência sustentável</h3>
+                        <p>Muitos agricultores desconhecem técnicas como plantio direto, rotação de culturas, irrigação por gotejamento e controle biológico de pragas.</p>
+                    </article>
+                </div>
+                <p class="texto-destaque">O <strong>GreenAgro</strong> quer ajudar a mudar essa realidade através da conscientização e de dicas práticas para o dia a dia no campo.</p>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 3: AVALIAÇÃO DE HÁBITOS (FUNCIONALIDADE PRINCIPAL) -->
+        <section id="avaliacao" class="secao avaliacao">
+            <div class="container">
+                <h2>📋 Avalie seus hábitos ambientais</h2>
+                <p>Responda às perguntas abaixo sobre suas práticas no campo e receba <strong>dicas personalizadas</strong> para tornar sua produção mais sustentável!</p>
+                
+                <form id="formAvaliacao">
+                    <!-- Pergunta 1 -->
+                    <div class="pergunta">
+                        <label>1. Como você realiza a irrigação na sua propriedade?</label>
+                        <select id="p1" required>
+                            <option value="">Selecione uma opção...</option>
+                            <option value="0">Irrigação por inundação (muita perda de água)</option>
+                            <option value="1">Aspersão convencional</option>
+                            <option value="2">Gotejamento ou microaspersão (mais eficiente)</option>
+                        </select>
+                    </div>
+
+                    <!-- Pergunta 2 -->
+                    <div class="pergunta">
+                        <label>2. Como você lida com agrotóxicos ou defensivos agrícolas?</label>
+                        <select id="p2" required>
+                            <option value="">Selecione uma opção...</option>
+                            <option value="0">Uso em grande quantidade, sem controle rigoroso</option>
+                            <option value="1">Uso seguindo recomendações técnicas e receituário</option>
+                            <option value="2">Utilizo controle biológico ou produção orgânica</option>
+                        </select>
+                    </div>
+
+                    <!-- Pergunta 3 -->
+                    <div class="pergunta">
+                        <label>3. O que você faz com as embalagens de defensivos ou fertilizantes?</label>
+                        <select id="p3" required>
+                            <option value="">Selecione uma opção...</option>
+                            <option value="0">Descarto no lixo comum ou queimo as embalagens</option>
+                            <option value="1">Armazeno em casa, mas não tenho destino certo</option>
+                            <option value="2">Faço a tríplice lavagem e descarte correto (ponto de coleta)</option>
+                        </select>
+                    </div>
+
+                    <!-- Pergunta 4 -->
+                    <div class="pergunta">
+                        <label>4. Você preserva as nascentes e matas ciliares da sua propriedade?</label>
+                        <select id="p4" required>
+                            <option value="">Selecione uma opção...</option>
+                            <option value="0">Não, desmatei para plantar ou expandir pastagem</option>
+                            <option value="1">Preservo algumas áreas, mas não todas</option>
+                            <option value="2">Sim, mantenho as APPs e recupero nascentes degradadas</option>
+                        </select>
+                    </div>
+
+                    <!-- Pergunta 5 -->
+                    <div class="pergunta">
+                        <label>5. Você utiliza energia renovável (solar, eólica) na sua produção?</label>
+                        <select id="p5" required>
+                            <option value="">Selecione uma opção...</option>
+                            <option value="0">Não utilizo e não pretendo no momento</option>
+                            <option value="1">Ainda não, mas tenho interesse em usar no futuro</option>
+                            <option value="2">Sim, já utilizo energia solar ou outra fonte renovável</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="botao-avaliar">🌾 Ver minhas dicas →</button>
+                </form>
+
+                <!-- Resultado da avaliação (aparece após o envio) -->
+                <div id="resultadoAvaliacao" class="resultado" style="display: none;">
+                    <h3>🌿 Suas dicas personalizadas</h3>
+                    <div id="mensagemResultado"></div>
+                    <div id="dicasPersonalizadas"></div>
+                    <button id="btnRefazer" class="botao-refazer">↻ Refazer avaliação</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 4: DICAS SUSTENTÁVEIS (CONTEÚDO GERAL) -->
+        <section id="dicas" class="secao dicas">
+            <div class="container">
+                <h2>💡 Dicas sustentáveis para o campo</h2>
+                <div class="lista-dicas">
+                    <div class="dica-item">
+                        <span>💧</span>
+                        <p><strong>Economize água:</strong> Substitua a irrigação por inundação pelo gotejamento - economia de até 60% de água!</p>
+                    </div>
+                    <div class="dica-item">
+                        <span>🌱</span>
+                        <p><strong>Proteja o solo:</strong> Faça rotação de culturas para evitar o esgotamento do solo e reduzir pragas naturalmente.</p>
+                    </div>
+                    <div class="dica-item">
+                        <span>♻️</span>
+                        <p><strong>Descarte correto:</strong> Realize a tríplice lavagem das embalagens de defensivos e devolva ao ponto de coleta.</p>
+                    </div>
+                    <div class="dica-item">
+                        <span>☀️</span>
+                        <p><strong>Energia limpa:</strong> Invista em energia solar para bombas d'água, cercas elétricas e iluminação.</p>
+                    </div>
+                    <div class="dica-item">
+                        <span>🌳</span>
+                        <p><strong>Preserve nascentes:</strong> Mantenha as matas ciliares e as Áreas de Preservação Permanente (APPs).</p>
+                    </div>
+                    <div class="dica-item">
+                        <span>🐞</span>
+                        <p><strong>Controle biológico:</strong> Use inimigos naturais das pragas ao invés de agrotóxicos químicos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 5: CONCLUSÃO -->
+        <section id="conclusao" class="secao conclusao">
+            <div class="container">
+                <h2>🎯 Conclusão</h2>
+                <p>O equilíbrio entre produção agrícola e meio ambiente não é apenas possível — é essencial para o futuro do planeta.</p>
+                <p>O <strong>GreenAgro</strong> acredita que pequenas mudanças nos hábitos do campo geram grandes resultados: solo mais fértil, água mais limpa, alimentos mais saudáveis e produtividade sustentável.</p>
+                <p><strong>Juntos, podemos construir um Agro forte e um futuro sustentável!</strong></p>
+                <div class="destaque-concurso">
+                    <p>🌾 Concurso Agrinho 2026 | Programação Front-End | GreenAgro 🌱</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer class="rodape">
+        <div class="container">
+            <p>© 2026 GreenAgro - Projeto desenvolvido para o Concurso Agrinho</p>
+            <p>🌱 Sustentabilidade e tecnologia a serviço do campo brasileiro</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
